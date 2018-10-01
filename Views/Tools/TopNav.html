@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="http://10.70.83.137:12345/css/bootstrap.css">
+<link rel="stylesheet" href="http://10.70.83.137:12345/css/site.css">
+<script src="http://10.70.83.137:12345/Scripts/jquery-3.3.1.min.js"></script>
+<script src="http://10.70.83.137:12345/Scripts/bootstrap.min.js"></script>
+<script src="http://10.70.83.137:12345/Scripts/app/TopNav.js"></script>
+<!--ALWAYS INCLUDE HELPER-->
+<script src="http://10.70.83.137:12345/Scripts/app/_helper.js"></script>
+<title>Eleaz WebApp</title>
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-dark navbar-expand justify-content-between">
+  <a class="navbar-brand" style="color: #FFFFFF; cursor:pointer !important;" onclick="PageRedirect('HOME');">E-WebApp</a>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+ <ul id="Nav_tabs" class="navbar-nav">
+      <li id="Home_Tab" class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+	  <li id="NumberGenerator_Tab" class="nav-item">
+        <a class="nav-link" href="#"><text onclick="PageRedirect('RAND');" >Number Generator</text> <span class="sr-only">(current)</span></a>
+      </li>
+	  <li id="CharacterCounter_Tab" class="nav-item">
+        <a class="nav-link" href="#">Character Counter <span class="sr-only">(current)</span></a>
+      </li>
+	  <li id="DocumentGenerator_Tab" class="nav-item">
+        <a class="nav-link" href="#">Document Generator <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+	</div>
+</nav>
+</html>

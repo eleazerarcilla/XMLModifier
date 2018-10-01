@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="http://10.70.83.137:12345/css/bootstrap.css">
+<link rel="stylesheet" href="http://10.70.83.137:12345/css/site.css">
+<script src="http://10.70.83.137:12345/Scripts/jquery-3.3.1.min.js"></script>
+<script src="http://10.70.83.137:12345/Scripts/bootstrap.min.js"></script>
+<script src="http://10.70.83.137:12345/Scripts/app/CharacterCount.js"></script>
+<!--ALWAYS INCLUDE HELPER-->
+<script src="http://10.70.83.137:12345/Scripts/app/_helper.js"></script>
+<title>Eleaz WebApp</title>
+</head>
+
+<body>
+<iframe id="iFrame_TopNav" width="100%" frameborder="0" height="60px"></iframe>
+<br/>
+<div id="main_content_div" class="container">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light with-border">
+  <div class="container">
+    <a class="navbar-brand" href="#">Character Counter</a>
+  <a class="btn btn-success float-right-explicit" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+   Customize..
+  </a>
+  </div>
+</nav>
+ <br/>
+ <div id="main_content_div" class="container-fluid">
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+	<div class="col-sm-5">
+	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Regular Expression</span>
+  </div>
+  <input id="tb_RegEx" onkeyup="RefreshSettings();" type="text" class="form-control" placeholder="/^[a-z0-9_-]{6,18}$/" aria-label="Username" aria-describedby="basic-addon1">
+
+	</div>
+  </div>
+  <div class="col-sm-5">
+ <div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" id="cb_countWhiteSpaces" onchange="RefreshSettings()">Count white spaces
+  </label>
+</div>
+<!-- <div class="form-check"> -->
+  <!-- <label class="form-check-label"> -->
+    <!-- <input class="form-check-input" type="checkbox" id="cb_countTrailingSpaces" onchange="RefreshSettings()">Count trailing spaces -->
+  <!-- </label> -->
+<!-- </div> -->
+</div>
+</div>
+
+ </div>
+   <h1 id="H1_CountDisplay" class="display-4 float-right-explicit">...</h1>
+ <div class="container-fluid">
+	<textarea id="TA_inputString" onpaste="GetCharacterCount();" onkeyup="GetCharacterCount();" rows=10 placeholder="Enter String" class="form-control"></textarea>
+ </div>
+ <br/>
+ <div class="container-fluid">
+
+ </div>
+</div>
+</div>
+<div id="div_unsupportedBrowser" class="jumbotron jumbotron-fluid" hidden>
+  <div class="container">
+    <h1 class="display-4">Unsupported Browser</h1>
+    <p class="lead">Please use Chrome or Firefox instead.</p>
+  </div>
+</div>
+
+</body>
+</html>
